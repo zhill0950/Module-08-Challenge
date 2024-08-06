@@ -322,10 +322,9 @@ class Cli {
           selectedVehicle.reverse();
         } else if (answers.action === 'Tow' && selectedVehicle instanceof Truck) {
           this.findVehicleToTow(selectedVehicle);
-          this.performActions;
+          return;
         } else if (answers.action === 'Perform wheelie' && selectedVehicle instanceof Motorbike) {
           selectedVehicle.wheelie();
-          this.performActions;
         } else if (answers.action === 'Select or create another vehicle') {
           this.startCli();
           return;
